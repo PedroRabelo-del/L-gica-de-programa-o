@@ -1,0 +1,23 @@
+Algoritmo "tabuada"
+
+Var
+   numero, i, resultado: inteiro
+
+Inicio
+
+   escreval("===== TABUADA =====")
+
+   escreva("Digite um numero inteiro positivo: ")
+   leia(numero)
+
+   para i de 1 ate 10 faca
+
+      resultado <- numero * i
+
+      escreval(numero, " x ", i, " = ", resultado)
+
+   fimpara
+
+   escreval("Fim da tabuada!")
+
+Fimalgoritmo
