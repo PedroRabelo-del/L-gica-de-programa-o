@@ -1,0 +1,108 @@
+Exercício 1 – Menu da Lanchonete (estrutura escolha)
+algoritmo "MenuLanchonete"
+
+var
+   codigo: inteiro
+
+inicio
+
+   escreval("===== MENU DA LANCHONETE =====")
+   escreval("1 - Cachorro Quente (R$ 8,00)")
+   escreval("2 - Hamburguer (R$ 15,00)")
+   escreval("3 - Misto Quente (R$ 10,00)")
+   escreval("4 - Refrigerante (R$ 5,00)")
+   escre("Digite o codigo desejado: ")
+   leia(codigo)
+
+   escolha codigo
+      caso 1
+         escreval("Cachorro Quente - R$ 8,00")
+      caso 2
+         escreval("Hamburguer - R$ 15,00")
+      caso 3
+         escreval("Misto Quente - R$ 10,00")
+      caso 4
+         escreval("Refrigerante - R$ 5,00")
+      outrocaso
+         escreval("Codigo invalido!")
+   fimescolha
+
+fimalgoritmo
+Exercício 2 – Tela de Bloqueio (estrutura enquanto)
+algoritmo "TelaBloqueio"
+
+var
+   senhaCorreta, senhaDigitada: caractere
+
+inicio
+
+   senhaCorreta <- "123456"
+
+   escre("Digite a senha: ")
+   leia(senhaDigitada)
+
+   enquanto senhaDigitada <> senhaCorreta faca
+      limpatela
+      escreval("Senha incorreta, acesso negado.")
+      escre("Tente novamente: ")
+      leia(senhaDigitada)
+   fimenquanto
+
+   escreval("Acesso liberado!")
+
+fimalgoritmo
+Exercício 3 – Caixa Eletrônico (integração enquanto + escolha)
+algoritmo "CaixaEletronico"
+
+var
+   opcao: inteiro
+   saldo, valor: real
+
+inicio
+
+   saldo <- 1000
+   opcao <- -1
+
+   enquanto opcao <> 0 faca
+
+      escreval("========================")
+      escreval("      CAIXA ELETRONICO")
+      escreval("========================")
+      escreval("1 - Consultar Saldo")
+      escreval("2 - Fazer Saque")
+      escreval("3 - Fazer Deposito")
+      escreval("0 - Sair")
+      escre("Escolha uma opcao: ")
+      leia(opcao)
+
+      escolha opcao
+
+         caso 1
+            escreval("Saldo atual: R$ ", saldo:0:2)
+
+         caso 2
+            escre("Digite o valor do saque: ")
+            leia(valor)
+            saldo <- saldo - valor
+            escreval("Novo saldo: R$ ", saldo:0:2)
+
+         caso 3
+            escre("Digite o valor do deposito: ")
+            leia(valor)
+            saldo <- saldo + valor
+            escreval("Novo saldo: R$ ", saldo:0:2)
+
+         caso 0
+            escreval("Sistema encerrado.")
+
+         outrocaso
+            escreval("Opcao invalida!")
+
+      fimescolha
+
+   fimenquanto
+
+fimalgoritmo
+
+
+
